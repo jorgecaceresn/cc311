@@ -2,6 +2,7 @@
 #define DEMO_H
 
 #include <QWidget>
+#include <QtDebug>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class Demo; }
@@ -14,6 +15,11 @@ class Demo : public QWidget
 public:
     Demo(QWidget *parent = nullptr);
     ~Demo();
+
+private slots:
+    void on_btn_Close_clicked();
+
+    void on_btn_Exit_clicked();
 
 private:
     Ui::Demo *ui;
